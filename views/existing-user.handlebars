@@ -1,0 +1,9 @@
+<p id="welcome">welcome back, {{nickname}}</p>
+<p>session id: {{sid}}</p>
+<p>views: {{views}}</p>
+<p>expiration date: {{expiration}}</p>
+<button id="logout">logout</button>
+<script>
+  const logoutButton = document.getElementById("logout"); logoutButton.addEventListener("click", handleLogout); function handleLogout() { fetch("/logout").then(()=>window.location
+  = "/") }
+</script>
